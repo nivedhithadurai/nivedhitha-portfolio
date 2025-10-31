@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nivedhitha Durairaj | PMP Certified Technical Project Manager</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root {
+    --primary-color: #004d99;
+    --secondary-color: #f8f9fa;
+    --text-color: #343a40;
+    --highlight-color: #ff6600;
+    --bg-color: #ffffff;
+    --footer-bg: #222;
+    --footer-text: #fff;
+    --box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+}
+body.dark-mode {
+    --bg-color: #121212;
+    --text-color: #e0e0e0;
+    --secondary-color: #1e1e1e;
+    --footer-bg: #000;
+    --footer-text: #fff;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    transition: background-color 0.3s, color 0.3s;
+}
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+.header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 50px 20px 80px;
+    text-align: center;
+    position: relative;
+}
+.dark-mode-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: var(--highlight-color);
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+}
+.header h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3em;
+    margin-bottom: 0.2em;
+}
+.header h2 {
+    font-size: 1.4em;
+    font-weight: 300;
+    margin-top: 5px;
+    opacity: 0.9;
+}
+.header p a {
+    color: white;
+    opacity: 0.8;
+    text-decoration: none;
+}
+.stats-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+.stat-box {
+    background-color: #fff;
+    color: var(--primary-color);
+    padding: 25px 30px;
+    border-radius: 12px;
+    box-shadow: var(--box-shadow);
+    font-weight: 700;
+    font-size: 1.1em;
+    text-align: center;
+    min-width: 220px;
+    transition: transform 0.3s, background-color 0.3s, color 0.3s;
+}
+body.dark-mode .stat-box {
+    background-color: #1e1e1e;
+    color: var(--highlight-color);
+}
+.stat-box strong {
+    display: block;
+    font-size: 1.8em;
+    color: var(--highlight-color);
+    margin-bottom: 8px;
+}
+section {
+    padding: 70px 0;
+    transition: background-color 0.3s;
+}
+body.dark-mode section:nth-child(even) {
+    background-color: #1e1e1e;
+}
+section:nth-child(even) {
+    background-color: var(--secondary-color);
+}
+h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2em;
+    color: var(--primary-color);
+    border-bottom: 4px solid var(--highlight-color);
+    padding-bottom: 10px;
+    margin-bottom: 40px;
+    display: inline-block;
+}
+.skills-grid, .project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+.skill-item, .project-card {
+    background-color: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: var(--box-shadow);
+    transition: transform 0.2s, background-color 0.3s;
+}
+body.dark-mode .skill-item, body.dark-mode .project-card {
+    background-color: #1e1e1e;
+}
+.skill-item:hover, .project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+}
+.skill-item h4, .project-card h4 {
+    color: var(--primary-color);
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-family: 'Montserrat', sans-serif;
+}
+.project-card ul {
+    list-style: none;
+    padding-left: 0;
+}
+.project-card ul li {
+    margin-bottom: 12px;
+    padding-left: 28px;
+    position: relative;
+}
+.project-card ul li::before {
+    content: '✅';
+    position: absolute;
+    left: 0;
+    color: var(--highlight-color);
+    font-size: 1.1em;
+}
+#about p { margin-bottom: 15px; }
+.education-title {
+    color: var(--primary-color);
+    margin-top: 30px;
+    margin-bottom: 15px;
+    font-size: 1.5em;
+    font-weight: 700;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 5px;
+    font-family: 'Montserrat', sans-serif;
+}
+.footer {
+    background-color: var(--footer-bg);
+    color: var(--footer-text);
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.9em;
+}
+.footer a { color: var(--highlight-color); text-decoration: none; }
+.footer a:hover { text-decoration: underline; }
+@media (max-width: 768px) {
+    .header h1 { font-size: 2.2em; }
+    .header h2 { font-size: 1.2em; }
+    .stats-grid { flex-direction: column; gap: 20px; }
+    .skills-grid, .project-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+<div class="header">
+    <button class="dark-mode-toggle" onclick="toggleDarkMode()">🌙 Dark Mode</button>
+    <div class="container">
+        <h1>Nivedhitha Durairaj <span style="color:var(--highlight-color)">| PMP® Certified</span></h1>
+        <h2>Technical Project Manager Driving Scalable Software and SaaS Delivery</h2>
+        <p>Blankenheimer Straße 25, 41469 Neuss, Germany | <a href="mailto:nivedhithadurai@gmail.com">nivedhithadurai@gmail.com</a> | <a href="tel:+4915510861251">+49 15510861251</a></p>
+        <div class="stats-grid">
+            <div class="stat-box"><strong>26%</strong> System Throughput Boost via Automation</div>
+            <div class="stat-box"><strong>37%</strong> Reduction in Manual Effort & Process Waste</div>
+            <div class="stat-box"><strong>12%</strong> Operational Platform Efficiency Improvement</div>
+        </div>
+    </div>
+</div>
+
+<section id="expertise">
+    <div class="container">
+        <h3>Technical Expertise & Tool Stack</h3>
+        <div class="skills-grid">
+            <div class="skill-item"><h4>Program & Project Management</h4>PMP, Agile Methodologies, Scrum Master, Technical Roadmapping, Portfolio Management, SDLC Management.</div>
+            <div class="skill-item"><h4>Governance & Stakeholder</h4>Risk, Change, Budget Management, Stakeholder Management, Process Mapping, Root Cause Analysis.</div>
+            <div class="skill-item"><h4>Technical & Product Focus</h4>SaaS, API Integration, System Architecture, Workflow Optimization, Digital Transformation.</div>
+            <div class="skill-item"><h4>Core Tools & Documentation</h4>Jira, Confluence, MS Project, Data Analysis, DITA XML, API Specs.</div>
+        </div>
+    </div>
+</section>
+
+<section id="projects">
+    <div class="container">
+        <h3>Project Showcase (Quantified Impact)</h3>
+        <div class="project-grid">
+            <div class="project-card">
+                <h4>SaaS Platform Optimization & Throughput Boost (Deloitte)</h4>
+                <ul>
+                    <li>Optimised Digital Onboarding Process, boosting throughput by 26%.</li>
+                    <li>Enhanced regulatory compliance, improving operational efficiency by 12%.</li>
+                    <li>Captured and documented business requirements for actionable deliverables.</li>
+                </ul>
+            </div>
+            <div class="project-card">
+                <h4>Platform Optimization & Manual Effort Reduction (Mahindra Comviva)</h4>
+                <ul>
+                    <li>Reduced manual effort by 37% through automation.</li>
+                    <li>Produced API specifications and system architecture documentation.</li>
+                    <li>Awarded Growth Mindset Practitioner Gold.</li>
+                </ul>
+            </div>
+            <div class="project-card">
+                <h4>Agile Delivery & Documentation Excellence (Straive/Cogent)</h4>
+                <ul>
+                    <li>Reduced review cycles by 30%.</li>
+                    <li>Translated user needs into 20+ detailed user stories.</li>
+                    <li>Managed product support materials using DITA XML.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="about">
+    <div class="container">
+        <h3>About & Professional Journey</h3>
+        <p>Professional journey built on Electrical & Electronics Engineering and a Master's in Communication Systems. Expertise in Agile, SaaS, and process improvement.</p>
+        <div class="education-title">Education</div>
+        <p><strong>M.E.</strong> Communication Systems, PSG College of Technology, Coimbatore (2020 – 2022)</p>
+        <p><strong>B.E.</strong> Electrical and Electronics Engineering, Kumaraguru College of Technology, Coimbatore (2016 – 2020)</p>
+        <div class="education-title">Professional Certifications</div>
+        <ul>
+            <li>Disruptive Thinking</li>
+            <li>Successful Negotiation</li>
+            <li>Conflict Management with Emotional Intelligence</li>
+            <li>Agile Methodologies</li>
+            <li>AI for Managers</li>
+            <li>Business & Technical Writing</li>
+        </ul>
+    </div>
+</section>
+
+<footer class="footer">
+    <p>© 2025 Nivedhitha Durairaj | <a href="mailto:nivedhithadurai@gmail.com">Email Me</a> | <a href="tel:+4915510861251">Call Me</a></p>
+</footer>
+
+<script>
+function toggleDarkMode() {
+    document.body.classList.toggle('dark-mode');
+}
+</script>
+</body>
+</html>
